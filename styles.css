@@ -1,0 +1,788 @@
+:root {
+    /* Color variables */
+    --SolidGrey: #C4C4C4;
+    --SolidBlack: #0C0C0C;
+    --B1Grey: #C4C4C466;
+    --B2Grey: #777777;
+    --BlackText: #0C0C0CE6;
+    --DarkGrey: #333333E6;
+    --LightGrey: #D9D9D9;
+    --BoxCardFill: #FFFFFFCC;
+    --BoxBorder: #C4C4C4CC;
+    --DefaultCardShadow: #C4C4C466;
+
+    /* Colors for pseudo effects */
+    --ButtonHoverPurple: #39179AC4;
+    --ButtonActivePurple: #39179AE6;
+    --CardHoverPurple: #39179A40;
+}
+
+/*sets 1 rem = 10px */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(#DFD9EF 20%, #5A5077), #DFD9EF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+#welcome-section {
+    height: 100vh;
+    width: 100vw;
+    padding-bottom: 4vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* navbar elements */
+#nav-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar {
+    height: fit-content;
+    width: fit-content;
+    background-color: var(--SolidGrey);
+    background-color: #DFD9EF66;
+    backdrop-filter: blur(0.7rem);
+    position: fixed;
+    padding: 0.8rem;
+    border-radius: 1.8rem;
+    top: 1.2rem;
+    z-index: 4;
+    /*background color blends into gradient-start, blurs underlying elements of z-index<4 */
+}
+
+#nav-spacer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    font-size: 1.6rem;
+    letter-spacing: .32rem;
+    color: white;
+    text-align: center;
+}
+
+#navbar a {
+    height: fit-content;
+    min-width: fit-content;
+    text-align: center;
+    text-decoration: none;
+    padding: 1.2rem;
+    margin: 0 2vw;
+    border-radius: 1.2rem;
+    background-color: DimGrey;
+    background-color: var(--DarkGrey);
+    transition: 200ms;
+}
+
+#navbar a:hover {
+    background-color: slateblue;
+    background-color: var(--ButtonHoverPurple);
+}
+
+#navbar a:active {
+    background-color: RebeccaPurple;
+    background-color: var(--ButtonActivePurple);
+}
+
+h1,
+h2,
+h3,
+h4,
+.body-text-normal,
+.body-text-large,
+.vocation-text,
+.LIAM-text,
+.q-cite-text {
+    color: var(--SolidBlack);
+    color: var(--BlackText);
+}
+
+a,
+h1,
+h2,
+h3,
+.vocation-text,
+.body-text-normal,
+.body-text-large {
+    font-weight: 500;
+}
+
+a,
+h2,
+h3,
+h4,
+.body-text-normal,
+.body-text-large,
+body-text-normal {
+    font-family: 'Inter', sans-serif;
+}
+
+.vocation-text,
+.q-cite-text {
+    font-family: 'Dosis', monospace;
+}
+
+h2,
+h3,
+.q-cite-text {
+    letter-spacing: 0.24rem;
+}
+
+.LIAM-text,
+.q-cite-text {
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+h1 {
+    display: inline;
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.6rem;
+
+}
+
+.content-card h4 {
+    font-weight: 400;
+    line-height: 1.6rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.16rem;
+    text-align: center;
+}
+
+.body-text-large {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    letter-spacing: .12rem;
+}
+
+.body-text-normal {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    font-weight: 500;
+    letter-spacing: .12rem;
+}
+
+.vocation-text-wrap {
+    height: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.vocation-text {
+    margin: 0;
+    letter-spacing: 0.4rem;
+    padding-right: 10px;
+    padding-left: 14px;
+}
+
+.vocation-text:after {
+    content: '';
+    border-left: 2px solid var(--DarkGrey);
+    border-right: 2px solid var(--DarkGrey);
+    border-radius: 4px;
+    position: relative;
+    left: 12px;
+}
+
+.vocation-text:last-child:after {
+    display: none;
+}
+
+.q-cite-text {
+    text-align: center;
+}
+
+.invisible-text {
+    opacity: 0;
+    line-height: 1rem;
+    font-size: 1rem;
+}
+
+/* LWR logo & wrapper */
+#cypher-image {
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url('https://i.ibb.co/J5WJrBd/LWR-Hero-Image-Default.png');
+    background-size: 80vh 40vh;
+    height: 40vh;
+    width: 80vh;
+}
+
+#cypher-image:hover {
+    animation: smoothSwapCypher 300ms;
+    background-image: url('https://i.ibb.co/qMYn4w7/LWR-Hero-Image-Hover.png');
+}
+
+/* website icons flex row*/
+.icon-array {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-evenly;
+    gap: 6vw;
+}
+
+/* Icons from Font Awesome (fa) */
+.fa {
+    padding: 1.6rem;
+    font-size: 2rem;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    color: white;
+    transition: 200ms;
+}
+
+.fa:hover {
+    opacity: 50%;
+}
+
+.fa-twitter {
+    background: CornflowerBlue;
+    background: #55ACEEE6;
+}
+
+.fa-github {
+    background-color: white;
+    background-color: #FFFFFFE6;
+    color: var(--SolidBlack);
+}
+
+.fa-linkedin {
+    background: RoyalBLue;
+    background: #3B5998E6;
+    color: white;
+}
+
+.fa-heart {
+    color: #C92E2E;
+    background: white;
+    background-color: #FFFFFFE6;
+}
+
+.fa-book-skull {
+    color: var(--SolidBlack);
+    background: white;
+    background-color: #FFFFFFE6;
+}
+
+/* "LIAM" tagline text */
+.LIAM-outer-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.LIAM-inner-wrapper {
+    display: inline;
+}
+
+.LIAM-text {
+    letter-spacing: 0.5rem;
+    display: inline-block;
+    width: 20vw;
+    text-align: left;
+    margin: 0;
+    white-space: nowrap;
+    font-family: 'Dosis', sans-serif;
+}
+
+.LIAM-text:first-letter {
+    font-size: 3rem;
+    margin-right: 1vw;
+    text-shadow: 0.4rem 0.4rem 0.2rem #33333377;
+}
+
+#LIAM-text-Aso {
+    position: relative;
+    margin-right: 2vw;
+    font-size: 1.6rem;
+    word-spacing: 2vw;
+    letter-spacing: 0.5vw;
+    min-width: fit-content;
+}
+
+#LIAM-text-Aso:first-letter {
+    margin-right: 2vw;
+}
+
+#LIAM-text-Mind {
+    position: relative;
+    width: fit-content;
+}
+
+/* About section */
+#about-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    gap: 6vw;
+    margin: 6vh 0;
+}
+
+#about-section h2 {
+    margin-bottom: 4vh;
+}
+
+#AS-text-box {
+    display: flex;
+    flex-direction: column;
+}
+
+#about-section p {
+    display: inline-block;
+    font-size: 1.4rem;
+    letter-spacing: 0.12rem;
+    word-spacing: 0.18rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    text-align: left;
+    color: black;
+    color: var(--BlackText);
+    max-width: 400px;
+}
+
+#profile-image {
+    height: 50vh;
+    width: 50vh;
+    background-image: url('https://i.ibb.co/31J5ztZ/About-Image-Default.png');
+    margin-top: auto;
+    background-size: 50vh 50vh;
+    border: 0;
+    margin-bottom: auto;
+}
+
+#profile-image:hover {
+    animation: smoothSwapProfile 300ms;
+    background-image: url('https://i.ibb.co/Jq3qqpD/LWR-About-Image-Hover.png');
+}
+
+/* main content sections*/
+
+.main-section {
+    height: fit-content;
+    width: 80vw;
+    max-width: 800px;
+    background-color: white;
+    background-color: #FFFFFFE6;
+    margin: 20px 0;
+    border-radius: 4vh;
+    padding: 4vh 2vw;
+    border: 5px solid var(--BoxBorder);
+}
+
+.main-section h2 {
+    margin-left: calc(10px+2vw);
+    font-weight: 500;
+}
+
+.main-section a {
+    text-decoration: none;
+}
+
+.card-array {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+.content-card {
+    min-width: 150px;
+    min-height: 200px;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-right: 2.4rem;
+    margin-top: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    box-shadow: 4px 4px 4px var(--B1Grey), -4px 4px 4px var(--B1Grey), 0 4px 4px var(--B1Grey);
+}
+
+.content-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 6px 0 6px var(--CardHoverPurple), -6px 0 6px var(--CardHoverPurple), 0 6px 6px var(--CardHoverPurple);
+}
+
+.content-card p {
+    line-height: 2rem;
+    color: DimGrey;
+    color: var(--DarkGrey);
+    text-align: center;
+}
+
+/* contact form header and section */
+
+#contact-h2-spacer {
+    width: 80vw;
+    max-width: 800px;
+    padding-left: calc(4vw + 10px);
+    padding-right: calc(4vw + 10px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#contact {
+    padding-top: 4vh;
+    color: white;
+}
+
+#contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    height: fit-content;
+    padding: 4vh 10vw;
+    background-color: white;
+    background-color: var(--BoxCardFill);
+}
+
+#contact-p1 {
+    padding: 0 2vw;
+    max-width: 800px;
+}
+
+#contact-p2 {
+    padding: 0 6vw;
+    max-width: 700px;
+}
+
+#contact h3 {
+    font-size: 2rem;
+    letter-spacing: .2rem;
+}
+
+/*"Communication Policies" - Bold, used with body-text-large */
+.CPB {
+    font-weight: 600;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding-left: 26px;
+    margin-bottom: 1.8rem;
+}
+
+li::before {
+    content: "⋗";
+    font-size: 1.6rem;
+    padding-right: 8px;
+    margin-left: -20px;
+    color: black;
+    color: var(--BlackText);
+}
+
+/* "checkbox trick" to reveal image of email address
+
+user clicks/taps the "label" which serves as a button, removing the layer blur effect from image.*/
+#accept-el-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4vw;
+    margin: 4vh 2vw;
+}
+
+.control-me::after {
+    content: url('https://i.ibb.co/4j5vh2V/El-Address-Unblurred.png');
+    filter: blur(1rem);
+}
+
+#toggle:checked~.control-me::after {
+    filter: blur(0);
+}
+
+#accepter {
+    background: DimGrey;
+    background: var(--DarkGrey);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+}
+
+#accepter:hover {
+    background: grey;
+    background: var(--B1Grey);
+    color: var(--SolidBlack);
+    color: var(--BlackText);
+}
+
+#accepter:active {
+    background: grey;
+    background: var(--B1Grey);
+    color: var(--SolidBlack);
+    color: var(--BlackText);
+    transform: translateY(0.4rem)
+}
+
+.visually-hidden {
+    position: absolute;
+    left: -100vw;
+}
+
+#contact q {
+    font-size: 2.4rem;
+}
+
+#quote-attrib {
+    line-height: 5rem;
+}
+
+.invisible {
+    opacity: 0;
+}
+
+/* footer section */
+.footer {
+    min-height: 5rem;
+    height: fit-content;
+}
+
+.footer-wrap {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 6vw;
+}
+
+.footer a {
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+}
+
+.footer a:hover {
+    color: grey;
+    color: var(--LightGrey);
+}
+
+.footer a:active {
+    color: var(--SolidBlack);
+    color: var(--BlackText);
+}
+
+.footer a:visited {
+    color: DimGrey;
+    color: var(--DarkGrey);
+}
+
+/* content-placeholders */
+.tile {
+    height: 60px;
+    width: 120px;
+    border-radius: 12px;
+    background-color: grey;
+    background-color: var(--B1Grey);
+    margin-top: 10px;
+}
+
+
+
+
+/* animations */
+
+
+@keyframes smoothSwapCypher {
+
+    0% {
+        background-image: url('https://i.ibb.co/J5WJrBd/LWR-Hero-Image-Default.png')
+    }
+
+    25% {
+        background-image: url('https://i.ibb.co/J5WJrBd/LWR-Hero-Image-Default.png');
+        opacity: 0.8;
+    }
+
+    50% {
+        background-image: url('https://i.ibb.co/qMYn4w7/LWR-Hero-Image-Hover.png');
+        opacity: 0.8;
+    }
+
+    75% {
+        background-image: urll('https://i.ibb.co/qMYn4w7/LWR-Hero-Image-Hover.png');
+        opacity: 0.9;
+    }
+
+    100% {
+        background-image: url('https://i.ibb.co/qMYn4w7/LWR-Hero-Image-Hover.png')
+    }
+
+}
+
+@keyframes smoothSwapProfile {
+
+    0% {
+        background-image: url('https://i.ibb.co/31J5ztZ/About-Image-Default.png')
+    }
+
+    25% {
+        background-image: url('https://i.ibb.co/31J5ztZ/About-Image-Default.png');
+        opacity: 0.8;
+    }
+
+    50% {
+        background-image: url('https://i.ibb.co/Jq3qqpD/LWR-About-Image-Hover.png');
+        opacity: 0.8;
+    }
+
+    75% {
+        background-image: url('https://i.ibb.co/Jq3qqpD/LWR-About-Image-Hover.png');
+        opacity: 0.9;
+    }
+
+    100% {
+        background-image: url('https://i.ibb.co/Jq3qqpD/LWR-About-Image-Hover.png')
+    }
+
+}
+
+
+@media screen and (max-width:1000px) {
+
+    #about-section {
+        flex-direction: column-reverse;
+    }
+
+    #about-section h2 {
+        text-align: center;
+    }
+
+    #about-section p {
+        max-width: 70vw;
+    }
+}
+
+@media screen and (max-width:750px) {
+
+    #cypher-image {
+        width: 60vw;
+        height: 30vw;
+        background-size: 60vw 30vw;
+    }
+
+}
+
+@media screen and (max-width:500px) {
+
+    html {
+        font-size: 38.7%;
+    }
+
+    .vocation-text-wrap {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .vocation-text {
+        font-size: 3.5rem;
+        border-bottom: 2px solid var(--DarkGrey);
+        padding-bottom: 12px;
+        padding-right: 14px;
+        border-radius: 16%;
+        text-align: center;
+    }
+
+    .vocation-text:last-child {
+        border: 0;
+    }
+
+    .vocation-text:after {
+        border: 0;
+    }
+
+    #profile-image {
+        width: 60vw;
+        height: 60vw;
+        background-size: 60vw 60vw;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 2.4rem;
+    }
+
+    .main-section {
+        width: 80vw;
+        padding: 4vh 0;
+    }
+
+    .main-section h2 {
+        margin-bottom: 4vh;
+    }
+
+    .card-array {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 6vh;
+    }
+
+    .content-card {
+        justify-content: center;
+        margin: 0;
+    }
+
+    .tile {
+        margin-bottom: 3rem;
+    }
+
+    .content-card h4 {
+        font-weight: 600;
+        letter-spacing: .2rem;
+    }
+
+    .content-card>* {
+        font-size: 120%;
+    }
+
+    #accept-el-wrapper {
+        flex-direction: column;
+    }
+
+}
