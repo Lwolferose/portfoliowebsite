@@ -355,6 +355,7 @@ h4 {
 
 #about-section h2 {
     margin-bottom: 4vh;
+    text-align: center;
 }
 
 #AS-text-box {
@@ -446,8 +447,36 @@ h4 {
     text-align: center;
 }
 
-/* contact form header and section */
+#pwebsite {
+    background-image: url();
+}
 
+#horus {
+    background-image: url();
+}
+
+#leila {
+    background-image: url();
+}
+
+#misc {
+    background-image: url();
+}
+
+#chouse {
+    background-image: url();
+}
+
+#axelock {
+    background-image: url();
+}
+
+#lmfto {
+    background-image: url();
+}
+
+
+/* contact form header and section */
 #contact-h2-spacer {
     width: 80vw;
     max-width: 800px;
@@ -524,10 +553,12 @@ user clicks/taps the "label" which serves as a button, removing the layer blur e
     margin: 4vh 2vw;
 }
 
+
 .control-me::after {
-    content: url('https://i.ibb.co/4j5vh2V/El-Address-Unblurred.png');
+    content: url('https://i.ibb.co/LZZKxyG/Unobscured-El-Adrs.png');
     filter: blur(1rem);
 }
+
 
 #toggle:checked~.control-me::after {
     filter: blur(0);
@@ -615,10 +646,11 @@ user clicks/taps the "label" which serves as a button, removing the layer blur e
 .tile {
     height: 60px;
     width: 120px;
+    background-size: 100%;
     border-radius: 12px;
     background-color: grey;
     background-color: var(--B1Grey);
-    margin-top: 10px;
+    margin-top: 1rem;
 }
 
 
@@ -686,10 +718,6 @@ user clicks/taps the "label" which serves as a button, removing the layer blur e
 
     #about-section {
         flex-direction: column-reverse;
-    }
-
-    #about-section h2 {
-        text-align: center;
     }
 
     #about-section p {
