@@ -454,8 +454,7 @@ i {
     background-color: grey;
     background-color: var(--B1Grey);
     margin-top: 1rem;
-    border: .4rem solid #FFFFFFF0;
-    
+    border: 2px solid var(--BoxBorder);
     
 }
 
@@ -466,14 +465,12 @@ i {
     text-align: center;
 }
 
-/* !! change <div class="tile"> element to <img>s, 
-implement lazy loading */ 
 #pwebsite {
     content: url(https://i.ibb.co/j9RzVLxP/Personal-Website-Thumbnail.png);
 }
-/* <img src="https://i.ibb.co/Xk5nv2rh/TN-HORUS.png" alt="TN-HORUS" border="0"> */
+
 #horus {
-    content: url(https://i.ibb.co/Xk5nv2rh/TN-HORUS.png);
+    content: url(https://i.ibb.co/WvMKwRrX/TN-HORUS-III.png);
 }
 
 #leila {
