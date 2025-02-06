@@ -72,7 +72,9 @@ a {
     font-size: 1.6rem;
     letter-spacing: .32rem;
     color: white;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
 #navbar a {
@@ -258,11 +260,14 @@ h4 {
     font-size: 2rem;
     width: 2rem;
     height: 2rem;
-    text-align: center;
-    text-decoration: none;
     border-radius: 50%;
-    color: white;
     transition: 200ms;
+    text-decoration: none;
+    letter-spacing: 0;
+}
+
+i {
+    text-align: center;
 }
 
 .fa:hover {
@@ -440,6 +445,20 @@ h4 {
     box-shadow: 6px 0 6px var(--CardHoverPurple), -6px 0 6px var(--CardHoverPurple), 0 6px 6px var(--CardHoverPurple);
 }
 
+
+.card-thumbnail {
+    height: 60px;
+    width: 120px;
+    background-size: 100%;
+    border-radius: 12px;
+    background-color: grey;
+    background-color: var(--B1Grey);
+    margin-top: 1rem;
+    border: .4rem solid #FFFFFFF0;
+    
+    
+}
+
 .content-card p {
     line-height: 2rem;
     color: DimGrey;
@@ -447,32 +466,34 @@ h4 {
     text-align: center;
 }
 
+/* !! change <div class="tile"> element to <img>s, 
+implement lazy loading */ 
 #pwebsite {
-    background-image: url();
+    content: url(https://i.ibb.co/j9RzVLxP/Personal-Website-Thumbnail.png);
 }
-
+/* <img src="https://i.ibb.co/Xk5nv2rh/TN-HORUS.png" alt="TN-HORUS" border="0"> */
 #horus {
-    background-image: url();
+    content: url(https://i.ibb.co/Xk5nv2rh/TN-HORUS.png);
 }
 
 #leila {
-    background-image: url();
+    content: url(https://i.ibb.co/ccvctpDY/TN-LEILA.png);
 }
 
 #misc {
-    background-image: url();
+    content: url(https://i.ibb.co/VY2WZDC1/TN-Miscellanea.png);
 }
 
 #chouse {
-    background-image: url();
+    content: url(https://i.ibb.co/4RBw8QFv/TN-Coffeehouse.png);
 }
 
 #axelock {
-    background-image: url();
+    content: url(https://i.ibb.co/zhP3LNyc/TN-Axe-Lock.png);
 }
 
 #lmfto {
-    background-image: url();
+    content: url(https://i.ibb.co/TqcV0gp6/TN-A11y-Audit.png);
 }
 
 
@@ -643,15 +664,7 @@ user clicks/taps the "label" which serves as a button, removing the layer blur e
 }
 
 /* content-placeholders */
-.tile {
-    height: 60px;
-    width: 120px;
-    background-size: 100%;
-    border-radius: 12px;
-    background-color: grey;
-    background-color: var(--B1Grey);
-    margin-top: 1rem;
-}
+
 
 
 
@@ -796,7 +809,7 @@ user clicks/taps the "label" which serves as a button, removing the layer blur e
         margin: 0;
     }
 
-    .tile {
+    .card-thumbnail {
         margin-bottom: 3rem;
     }
 
