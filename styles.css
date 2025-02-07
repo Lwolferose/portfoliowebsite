@@ -760,12 +760,15 @@ user clicks/taps the "label" which serves as a button, removing the layer blur e
             line-height: 120%;
     }
 
-    #contact-section {
+    #contact-section,
+    #AS-body-box {
         font-size: 140%;
+        line-height: 140%;
     }
 
     q {
         font-size: 120%;
+        line-height: 120%;
     }
     /* rem adjustments:
 
