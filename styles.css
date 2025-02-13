@@ -240,19 +240,12 @@ h4 {
     font-size: 1rem;
 }
 
-/* LWR logo & wrapper */
+/* LWR logo image wrapper */
 #cypher-image {
     margin-left: auto;
     margin-right: auto;
-    background-image: url('https://i.ibb.co/J5WJrBd/LWR-Hero-Image-Default.png');
-    background-size: 80vh 40vh;
     height: 40vh;
     width: 80vh;
-}
-
-#cypher-image:hover {
-    animation: smoothSwapCypher 300ms;
-    background-image: url('https://i.ibb.co/qMYn4w7/LWR-Hero-Image-Hover.png');
 }
 
 /* website icons flex row*/
@@ -382,19 +375,14 @@ i {
     max-width: 400px;
 }
 
+/*interactive profile image wrapper */ 
 #profile-image {
     height: 50vh;
     width: 50vh;
-    background-image: url('https://i.ibb.co/31J5ztZ/About-Image-Default.png');
     margin-top: auto;
     background-size: 50vh 50vh;
     border: 0;
     margin-bottom: auto;
-}
-
-#profile-image:hover {
-    animation: smoothSwapProfile 300ms;
-    background-image: url('https://i.ibb.co/Jq3qqpD/LWR-About-Image-Hover.png');
 }
 
 /* main content sections*/
@@ -628,11 +616,10 @@ user clicks/taps the "label" which serves as a button, removing the layer blur e
 
 /* footer section */
 .footer {
-    min-height: 5rem;
     height: fit-content;
 }
 
-.footer-wrap {
+.footer-links {
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -666,65 +653,58 @@ user clicks/taps the "label" which serves as a button, removing the layer blur e
     color: var(--DarkGrey);*/
 }
 
-
-/* animations */
-
-
-@keyframes smoothSwapCypher {
-
-    0% {
-        background-image: url('https://i.ibb.co/J5WJrBd/LWR-Hero-Image-Default.png')
-    }
-
-    25% {
-        background-image: url('https://i.ibb.co/J5WJrBd/LWR-Hero-Image-Default.png');
-        opacity: 0.8;
-    }
-
-    50% {
-        background-image: url('https://i.ibb.co/qMYn4w7/LWR-Hero-Image-Hover.png');
-        opacity: 0.8;
-    }
-
-    75% {
-        background-image: urll('https://i.ibb.co/qMYn4w7/LWR-Hero-Image-Hover.png');
-        opacity: 0.9;
-    }
-
-    100% {
-        background-image: url('https://i.ibb.co/qMYn4w7/LWR-Hero-Image-Hover.png')
-    }
-
+.website-credit {
+    width: 100vw;
+    height: fit-content;
+    padding: 2vh;
+    background-color: var(--DarkGrey);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    letter-spacing: 0.16rem;
+    font-family: Inter;
+    text-align: center;
+    line-height: 2rem;
 }
 
-@keyframes smoothSwapProfile {
+.website-credit a {
+    display: inline;
+}
 
-    0% {
-        background-image: url('https://i.ibb.co/31J5ztZ/About-Image-Default.png')
-    }
+/* Transition for interactive images*/
 
-    25% {
-        background-image: url('https://i.ibb.co/31J5ztZ/About-Image-Default.png');
-        opacity: 0.8;
-    }
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
 
-    50% {
-        background-image: url('https://i.ibb.co/Jq3qqpD/LWR-About-Image-Hover.png');
-        opacity: 0.8;
-    }
+.image,
+.image-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
 
-    75% {
-        background-image: url('https://i.ibb.co/Jq3qqpD/LWR-About-Image-Hover.png');
-        opacity: 0.9;
-    }
+.image-hover {
+    opacity: 0;
+}
 
-    100% {
-        background-image: url('https://i.ibb.co/Jq3qqpD/LWR-About-Image-Hover.png')
-    }
+.image-container:hover .image-hover {
+    opacity: 1;
+}
 
+.image-container:hover .image {
+    opacity: 0;
 }
 
 
+/*responsive adjustments*/ 
 @media screen and (max-width:1000px) {
 
     #about-section {
@@ -761,7 +741,7 @@ user clicks/taps the "label" which serves as a button, removing the layer blur e
     }
 
     #contact-section,
-    #AS-body-box {
+    #AS-body-box  {
         font-size: 140%;
         line-height: 140%;
     }
