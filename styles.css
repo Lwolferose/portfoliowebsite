@@ -689,15 +689,6 @@ user clicks/taps the "label" which serves as a button, removing the layer blur e
     transition: opacity 0.5s ease-in-out;
 }
 
-
-
-.cypher-image {
-    margin-left: auto;
-    margin-right: auto;
-    height: 40vh;
-    width: 80vh;
-}
-
 .image-hover {
     opacity: 0;
 }
