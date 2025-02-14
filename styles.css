@@ -677,18 +677,25 @@ user clicks/taps the "label" which serves as a button, removing the layer blur e
 
 .image-container {
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: inherit;
+    height: inherit;
 }
 
 .image,
 .image-hover {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    width: inherit;
+    height: inherit;
     transition: opacity 0.5s ease-in-out;
+}
+
+
+
+.cypher-image {
+    margin-left: auto;
+    margin-right: auto;
+    height: 40vh;
+    width: 80vh;
 }
 
 .image-hover {
