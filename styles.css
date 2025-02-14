@@ -72,9 +72,7 @@ a {
     font-size: 1.6rem;
     letter-spacing: .32rem;
     color: white;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
+    text-align: center;
 }
 
 #navbar a {
@@ -144,11 +142,6 @@ h3,
     letter-spacing: 0.24rem;
 }
 
-.body-text-large,
-.body-text-large {
-    letter-spacing: 0.06rem;
-}
-
 .LIAM-text,
 .q-cite-text {
     font-weight: 600;
@@ -170,36 +163,28 @@ h3 {
 
 h4 {
     font-size: 1.6rem;
+
 }
 
 .content-card h4 {
     font-weight: 400;
     line-height: 1.6rem;
     margin-bottom: 1rem;
-    letter-spacing: 0.12rem;
+    letter-spacing: 0.16rem;
     text-align: center;
 }
-
-/*
-#about-section p {
-    display: inline-block;
-    font-size: 1.4rem;
-    font-weight: 500;
-    text-align: left;
-    color: black;
-    color: var(--BlackText);
-    max-width: 400px;
-}
-    */ 
 
 .body-text-large {
     font-size: 1.6rem;
     line-height: 2rem;
+    letter-spacing: .12rem;
 }
 
 .body-text-normal {
     font-size: 1.2rem;
     line-height: 1.6rem;
+    font-weight: 500;
+    letter-spacing: .12rem;
 }
 
 .vocation-text-wrap {
@@ -240,12 +225,19 @@ h4 {
     font-size: 1rem;
 }
 
-/* LWR logo image wrapper */
+/* LWR logo & wrapper */
 #cypher-image {
     margin-left: auto;
     margin-right: auto;
+    background-image: url('https://i.ibb.co/J5WJrBd/LWR-Hero-Image-Default.png');
+    background-size: 80vh 40vh;
     height: 40vh;
     width: 80vh;
+}
+
+#cypher-image:hover {
+    animation: smoothSwapCypher 300ms;
+    background-image: url('https://i.ibb.co/qMYn4w7/LWR-Hero-Image-Hover.png');
 }
 
 /* website icons flex row*/
@@ -266,14 +258,11 @@ h4 {
     font-size: 2rem;
     width: 2rem;
     height: 2rem;
-    border-radius: 50%;
-    transition: 200ms;
-    text-decoration: none;
-    letter-spacing: 0;
-}
-
-i {
     text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    color: white;
+    transition: 200ms;
 }
 
 .fa:hover {
@@ -281,8 +270,8 @@ i {
 }
 
 .fa-twitter {
-    background-color: CornflowerBlue;
-    background-color: #55ACEEE6;
+    background: CornflowerBlue;
+    background: #55ACEEE6;
 }
 
 .fa-github {
@@ -292,14 +281,14 @@ i {
 }
 
 .fa-linkedin {
-    background-color: RoyalBLue;
-    background-color: #3B5998E6;
+    background: RoyalBLue;
+    background: #3B5998E6;
     color: white;
 }
 
 .fa-heart {
     color: #C92E2E;
-    background-color: white;
+    background: white;
     background-color: #FFFFFFE6;
 }
 
@@ -317,7 +306,6 @@ i {
 
 .LIAM-inner-wrapper {
     display: inline;
-    padding-left: 4vw;
 }
 
 .LIAM-text {
@@ -338,7 +326,7 @@ i {
 
 #LIAM-text-Aso {
     position: relative;
-    margin-right: 1.2vw;
+    margin-right: 2vw;
     font-size: 1.6rem;
     word-spacing: 2vw;
     letter-spacing: 0.5vw;
@@ -352,7 +340,6 @@ i {
 #LIAM-text-Mind {
     position: relative;
     width: fit-content;
-    margin-left: 0.4rem;
 }
 
 /* About section */
@@ -372,17 +359,36 @@ i {
 }
 
 #AS-text-box {
+    display: flex;
+    flex-direction: column;
+}
+
+#about-section p {
+    display: inline-block;
+    font-size: 1.4rem;
+    letter-spacing: 0.12rem;
+    word-spacing: 0.18rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    text-align: left;
+    color: black;
+    color: var(--BlackText);
     max-width: 400px;
 }
 
-/*interactive profile image wrapper */ 
 #profile-image {
     height: 50vh;
     width: 50vh;
+    background-image: url('https://i.ibb.co/31J5ztZ/About-Image-Default.png');
     margin-top: auto;
     background-size: 50vh 50vh;
     border: 0;
     margin-bottom: auto;
+}
+
+#profile-image:hover {
+    animation: smoothSwapProfile 300ms;
+    background-image: url('https://i.ibb.co/Jq3qqpD/LWR-About-Image-Hover.png');
 }
 
 /* main content sections*/
@@ -434,53 +440,39 @@ i {
     box-shadow: 6px 0 6px var(--CardHoverPurple), -6px 0 6px var(--CardHoverPurple), 0 6px 6px var(--CardHoverPurple);
 }
 
-
-.card-thumbnail {
-    height: 60px;
-    width: 120px;
-    background-size: 100%;
-    border-radius: 12px;
-    background-color: grey;
-    background-color: var(--B1Grey);
-    margin-top: 1rem;
-    border: 2px solid var(--BoxBorder);
-    
-}
-
 .content-card p {
     line-height: 2rem;
     color: DimGrey;
     color: var(--DarkGrey);
     text-align: center;
-    letter-spacing: 0.04rem;
 }
 
 #pwebsite {
-    content: url(https://i.ibb.co/j9RzVLxP/Personal-Website-Thumbnail.png);
+    background-image: url();
 }
 
 #horus {
-    content: url(https://i.ibb.co/WvMKwRrX/TN-HORUS-III.png);
+    background-image: url();
 }
 
 #leila {
-    content: url(https://i.ibb.co/ccvctpDY/TN-LEILA.png);
+    background-image: url();
 }
 
 #misc {
-    content: url(https://i.ibb.co/VY2WZDC1/TN-Miscellanea.png);
+    background-image: url();
 }
 
 #chouse {
-    content: url(https://i.ibb.co/4RBw8QFv/TN-Coffeehouse.png);
+    background-image: url();
 }
 
 #axelock {
-    content: url(https://i.ibb.co/zhP3LNyc/TN-Axe-Lock.png);
+    background-image: url();
 }
- 
+
 #lmfto {
-    content: url(https://i.ibb.co/1NZ0ybS/TN-A11y-Audit.png);
+    background-image: url();
 }
 
 
@@ -565,7 +557,6 @@ user clicks/taps the "label" which serves as a button, removing the layer blur e
 .control-me::after {
     content: url('https://i.ibb.co/LZZKxyG/Unobscured-El-Adrs.png');
     filter: blur(1rem);
-    box-sizing: border-box;
 }
 
 
@@ -616,10 +607,11 @@ user clicks/taps the "label" which serves as a button, removing the layer blur e
 
 /* footer section */
 .footer {
+    min-height: 5rem;
     height: fit-content;
 }
 
-.footer-links {
+.footer-wrap {
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -629,11 +621,10 @@ user clicks/taps the "label" which serves as a button, removing the layer blur e
 }
 
 .footer a {
-    padding: 10px;
+    padding: 1rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
     text-decoration: underline;
-    text-align: center;
 }
 
 .footer a:hover {
@@ -647,64 +638,82 @@ user clicks/taps the "label" which serves as a button, removing the layer blur e
 }
 
 .footer a:visited {
-    color: var(--SolidBlack);
-    color: var(--BlackText);
-    /*color: DimGrey; 
-    color: var(--DarkGrey);*/
+    color: DimGrey;
+    color: var(--DarkGrey);
 }
 
-.website-credit {
-    width: 100vw;
-    height: fit-content;
-    padding: 2vh;
-    background-color: var(--DarkGrey);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.6rem;
-    letter-spacing: 0.16rem;
-    font-family: Inter;
-    text-align: center;
-    line-height: 2rem;
-}
-
-.website-credit a {
-    display: inline;
-}
-
-/* Transition for interactive images*/
-
-.image-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.image,
-.image-hover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.image-hover {
-    opacity: 0;
-}
-
-.image-container:hover .image-hover {
-    opacity: 1;
-}
-
-.image-container:hover .image {
-    opacity: 0;
+/* content-placeholders */
+.tile {
+    height: 60px;
+    width: 120px;
+    background-size: 100%;
+    border-radius: 12px;
+    background-color: grey;
+    background-color: var(--B1Grey);
+    margin-top: 1rem;
 }
 
 
-/*responsive adjustments*/ 
+
+
+/* animations */
+
+
+@keyframes smoothSwapCypher {
+
+    0% {
+        background-image: url('https://i.ibb.co/J5WJrBd/LWR-Hero-Image-Default.png')
+    }
+
+    25% {
+        background-image: url('https://i.ibb.co/J5WJrBd/LWR-Hero-Image-Default.png');
+        opacity: 0.8;
+    }
+
+    50% {
+        background-image: url('https://i.ibb.co/qMYn4w7/LWR-Hero-Image-Hover.png');
+        opacity: 0.8;
+    }
+
+    75% {
+        background-image: urll('https://i.ibb.co/qMYn4w7/LWR-Hero-Image-Hover.png');
+        opacity: 0.9;
+    }
+
+    100% {
+        background-image: url('https://i.ibb.co/qMYn4w7/LWR-Hero-Image-Hover.png')
+    }
+
+}
+
+@keyframes smoothSwapProfile {
+
+    0% {
+        background-image: url('https://i.ibb.co/31J5ztZ/About-Image-Default.png')
+    }
+
+    25% {
+        background-image: url('https://i.ibb.co/31J5ztZ/About-Image-Default.png');
+        opacity: 0.8;
+    }
+
+    50% {
+        background-image: url('https://i.ibb.co/Jq3qqpD/LWR-About-Image-Hover.png');
+        opacity: 0.8;
+    }
+
+    75% {
+        background-image: url('https://i.ibb.co/Jq3qqpD/LWR-About-Image-Hover.png');
+        opacity: 0.9;
+    }
+
+    100% {
+        background-image: url('https://i.ibb.co/Jq3qqpD/LWR-About-Image-Hover.png')
+    }
+
+}
+
+
 @media screen and (max-width:1000px) {
 
     #about-section {
@@ -729,51 +738,7 @@ user clicks/taps the "label" which serves as a button, removing the layer blur e
 @media screen and (max-width:500px) {
 
     html {
-            font-size: 37.5%;
-        }
-
-    h4,
-    .body-text-normal,
-    .body-text-large,
-    .CPB {
-            font-size: 120%;
-            line-height: 120%;
-    }
-
-    #contact-section,
-    #AS-body-box  {
-        font-size: 140%;
-        line-height: 140%;
-    }
-
-    q {
-        font-size: 120%;
-        line-height: 120%;
-    }
-    /* rem adjustments:
-
-    h2, h3,
-
-    .body-text-large {
-        font-size: 1.6rem; = 16 px >>>  
-        line-height: 2rem;
-    }
-
-    .body-text-normal {
-        font-size: 1.2rem; >>> 
-        line-height: 1.6rem;
-    }
-    
-    */ 
-
-    #navbar {
-        top: 4rem;
-    }
-
-    #welcome-section {
-        height: fit-content;
-        justify-content: start;
-        gap: 6vh;
+        font-size: 38.7%;
     }
 
     .vocation-text-wrap {
@@ -785,7 +750,6 @@ user clicks/taps the "label" which serves as a button, removing the layer blur e
     .vocation-text {
         font-size: 3.5rem;
         border-bottom: 2px solid var(--DarkGrey);
-        border-top: 0;
         padding-bottom: 12px;
         padding-right: 14px;
         border-radius: 16%;
@@ -800,39 +764,6 @@ user clicks/taps the "label" which serves as a button, removing the layer blur e
         border: 0;
     }
 
-    .LIAM-inner-wrapper {
-        display: inline;
-    }
-
-    .LIAM-text {
-        letter-spacing: 0.5rem;
-        display: inline-block;
-        width: fit-content;
-        text-align: left;
-        padding-right: 7vw;
-        margin: 0;
-        white-space: nowrap;
-        font-family: 'Dosis', sans-serif;
-    }
-
-    #LIAM-text-Aso:first-letter {
-        margin-right: 1vw;
-    }
-
-    #LIAM-text-Aso {
-        position: relative;
-        margin-right: -1vw;
-        font-size: 1.6rem;
-        word-spacing: 2vw;
-        letter-spacing: 0.5vw;
-    }
-
-    #LIAM-text-Mind {
-        margin-left: -3vw;
-        padding-right: 0;
-    }
-    
-
     #profile-image {
         width: 60vw;
         height: 60vw;
@@ -841,11 +772,11 @@ user clicks/taps the "label" which serves as a button, removing the layer blur e
 
     h2 {
         text-align: center;
+        font-size: 2.4rem;
     }
 
     .main-section {
         width: 80vw;
-        max-width: 300px;
         padding: 4vh 0;
     }
 
@@ -865,7 +796,7 @@ user clicks/taps the "label" which serves as a button, removing the layer blur e
         margin: 0;
     }
 
-    .card-thumbnail {
+    .tile {
         margin-bottom: 3rem;
     }
 
@@ -874,21 +805,12 @@ user clicks/taps the "label" which serves as a button, removing the layer blur e
         letter-spacing: .2rem;
     }
 
-    .CPB {
-        color: var(--SolidBlack);
-        color: var(--BlackText);
+    .content-card>* {
+        font-size: 120%;
     }
 
     #accept-el-wrapper {
         flex-direction: column;
-    }
-
-    .footer {
-        padding-bottom: 2vh;
-    }
-
-    .footer-wrap {
-        gap: 3vw;
     }
 
 }
