@@ -701,6 +701,8 @@ user clicks/taps the "label" which serves as a button, removing the layer blur e
     opacity: 0;
 }
 
+/* please let this work */
+
 
 /*responsive adjustments*/ 
 @media screen and (max-width:1000px) {
