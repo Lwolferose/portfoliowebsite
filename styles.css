@@ -653,18 +653,64 @@ user clicks/taps the "label" which serves as a button, removing the layer blur e
     margin-top: 1rem;
 }
 
-.image-container {
-    position: relative;
-    width: inherit;
-    height: inherit;
+
+
+
+/* animations */
+
+
+@keyframes smoothSwapCypher {
+
+    0% {
+        background-image: url('https://i.ibb.co/J5WJrBd/LWR-Hero-Image-Default.png')
+    }
+
+    25% {
+        background-image: url('https://i.ibb.co/J5WJrBd/LWR-Hero-Image-Default.png');
+        opacity: 0.8;
+    }
+
+    50% {
+        background-image: url('https://i.ibb.co/qMYn4w7/LWR-Hero-Image-Hover.png');
+        opacity: 0.8;
+    }
+
+    75% {
+        background-image: urll('https://i.ibb.co/qMYn4w7/LWR-Hero-Image-Hover.png');
+        opacity: 0.9;
+    }
+
+    100% {
+        background-image: url('https://i.ibb.co/qMYn4w7/LWR-Hero-Image-Hover.png')
+    }
+
 }
 
-.image,
-.image-hover {
-    position: absolute;
-    width: inherit;
-    height: inherit;
-    transition: opacity 0.5s ease-in-out;
+@keyframes smoothSwapProfile {
+
+    0% {
+        background-image: url('https://i.ibb.co/31J5ztZ/About-Image-Default.png')
+    }
+
+    25% {
+        background-image: url('https://i.ibb.co/31J5ztZ/About-Image-Default.png');
+        opacity: 0.8;
+    }
+
+    50% {
+        background-image: url('https://i.ibb.co/Jq3qqpD/LWR-About-Image-Hover.png');
+        opacity: 0.8;
+    }
+
+    75% {
+        background-image: url('https://i.ibb.co/Jq3qqpD/LWR-About-Image-Hover.png');
+        opacity: 0.9;
+    }
+
+    100% {
+        background-image: url('https://i.ibb.co/Jq3qqpD/LWR-About-Image-Hover.png')
+    }
+
 }
 
 
