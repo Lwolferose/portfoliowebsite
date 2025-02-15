@@ -229,16 +229,12 @@ h4 {
 #cypher-image {
     margin-left: auto;
     margin-right: auto;
-    background-image: url('https://i.ibb.co/J5WJrBd/LWR-Hero-Image-Default.png');
     background-size: 80vh 40vh;
     height: 40vh;
     width: 80vh;
 }
 
-#cypher-image:hover {
-    animation: smoothSwapCypher 300ms;
-    background-image: url('https://i.ibb.co/qMYn4w7/LWR-Hero-Image-Hover.png');
-}
+
 
 /* website icons flex row*/
 .icon-array {
@@ -306,6 +302,7 @@ h4 {
 
 .LIAM-inner-wrapper {
     display: inline;
+    text-wrap: nowrap;
 }
 
 .LIAM-text {
@@ -379,17 +376,12 @@ h4 {
 #profile-image {
     height: 50vh;
     width: 50vh;
-    background-image: url('https://i.ibb.co/31J5ztZ/About-Image-Default.png');
     margin-top: auto;
     background-size: 50vh 50vh;
     border: 0;
     margin-bottom: auto;
 }
 
-#profile-image:hover {
-    animation: smoothSwapProfile 300ms;
-    background-image: url('https://i.ibb.co/Jq3qqpD/LWR-About-Image-Hover.png');
-}
 
 /* main content sections*/
 
@@ -435,6 +427,17 @@ h4 {
     box-shadow: 4px 4px 4px var(--B1Grey), -4px 4px 4px var(--B1Grey), 0 4px 4px var(--B1Grey);
 }
 
+.card-thumbnail {
+    height: 60px;
+    width: 120px;
+    background-size: 100%;
+    border-radius: 12px;
+    background-color: grey;
+    background-color: var(--B1Grey);
+    margin-top: 1rem;
+    border: 2px solid var(--BoxBorder);
+}
+
 .content-card:hover {
     transform: translateY(-10px);
     box-shadow: 6px 0 6px var(--CardHoverPurple), -6px 0 6px var(--CardHoverPurple), 0 6px 6px var(--CardHoverPurple);
@@ -448,31 +451,31 @@ h4 {
 }
 
 #pwebsite {
-    background-image: url();
+    content: url(https://i.ibb.co/j9RzVLxP/Personal-Website-Thumbnail.png);
 }
 
 #horus {
-    background-image: url();
+    content: url(https://i.ibb.co/WvMKwRrX/TN-HORUS-III.png);
 }
 
 #leila {
-    background-image: url();
+    content: url(https://i.ibb.co/ccvctpDY/TN-LEILA.png);
 }
 
 #misc {
-    background-image: url();
+    content: url(https://i.ibb.co/VY2WZDC1/TN-Miscellanea.png);
 }
 
 #chouse {
-    background-image: url();
+    content: url(https://i.ibb.co/4RBw8QFv/TN-Coffeehouse.png);
 }
 
 #axelock {
-    background-image: url();
+    content: url(https://i.ibb.co/zhP3LNyc/TN-Axe-Lock.png);
 }
 
 #lmfto {
-    background-image: url();
+    content: url(https://i.ibb.co/1NZ0ybS/TN-A11y-Audit.png);
 }
 
 
@@ -642,15 +645,20 @@ user clicks/taps the "label" which serves as a button, removing the layer blur e
     color: var(--DarkGrey);
 }
 
-/* content-placeholders */
-.tile {
-    height: 60px;
-    width: 120px;
-    background-size: 100%;
-    border-radius: 12px;
-    background-color: grey;
-    background-color: var(--B1Grey);
-    margin-top: 1rem;
+.website-credit {
+    width: 100vw;
+    height: fit-content;
+    padding: 2vh;
+    background-color: var(--DarkGrey);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    letter-spacing: 0.16rem;
+    font-family: Inter;
+    text-align: center;
+    line-height: 2.4rem;
 }
 
 .image-container {
@@ -667,7 +675,16 @@ user clicks/taps the "label" which serves as a button, removing the layer blur e
     transition: opacity 0.5s ease-in-out;
 }
 
+.image-container:hover .image-hover {
+    opacity: 1;
+}
 
+.image-container:hover .image {
+    opacity: 0;
+}
+
+
+/*responsive adjustments*/ 
 @media screen and (max-width:1000px) {
 
     #about-section {
@@ -695,6 +712,33 @@ user clicks/taps the "label" which serves as a button, removing the layer blur e
         font-size: 38.7%;
     }
 
+    h4,
+    .body-text-normal,
+    .body-text-large,
+    .CPB, 
+    q 
+     {
+        font-size: 120%;
+        line-height: 120%;
+    }
+
+    #contact-section,
+    #AS-body-box, 
+    #about-section p {
+        font-size: 140%;
+        line-height: 140%;
+    }
+
+    #navbar {
+        top: 4rem;
+    }
+
+    #welcome-section {
+        height: fit-content;
+        justify-content: start;
+        gap: 6vh;
+    }
+
     .vocation-text-wrap {
         flex-direction: column;
         gap: 1rem;
@@ -704,6 +748,7 @@ user clicks/taps the "label" which serves as a button, removing the layer blur e
     .vocation-text {
         font-size: 3.5rem;
         border-bottom: 2px solid var(--DarkGrey);
+        border-top: 0;
         padding-bottom: 12px;
         padding-right: 14px;
         border-radius: 16%;
@@ -716,6 +761,34 @@ user clicks/taps the "label" which serves as a button, removing the layer blur e
 
     .vocation-text:after {
         border: 0;
+    }
+
+    .LIAM-text {
+        letter-spacing: 0.5rem;
+        display: inline-block;
+        width: fit-content;
+        text-align: left;
+        padding-right: 7vw;
+        margin: 0;
+        white-space: nowrap;
+        font-family: 'Dosis', sans-serif;
+    }
+
+    #LIAM-text-Aso:first-letter {
+        margin-right: 1vw;
+    }
+
+    #LIAM-text-Aso {
+        position: relative;
+        margin-right: -1vw;
+        font-size: 1.6rem;
+        word-spacing: 2vw;
+        letter-spacing: 0.5vw;
+    }
+
+    #LIAM-text-Mind {
+        margin-left: -3vw;
+        padding-right: 0;
     }
 
     #profile-image {
@@ -759,8 +832,8 @@ user clicks/taps the "label" which serves as a button, removing the layer blur e
         letter-spacing: .2rem;
     }
 
-    .content-card>* {
-        font-size: 120%;
+     .content-card>* {
+            font-size: 120%;
     }
 
     #accept-el-wrapper {
